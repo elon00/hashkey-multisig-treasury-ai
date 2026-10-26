@@ -1,0 +1,27 @@
+{
+  "mcpServers": {
+    "hashkey-multisig-treasury-ai": {
+      "command": "cargo",
+      "args": [
+        "run",
+        "--release",
+        "--quiet"
+      ],
+      "env": {
+        "RUST_LOG": "info",
+        "HACKATHON_TRACK": "HashKey Chain",
+        "PROJECT_TICKER": "HKTREAS"
+      },
+      "tools": [
+        {
+          "name": "verify_hktreas_invariants",
+          "description": "Verifies deterministic invariants for HashKey MultiSig Treasury AI on HashKey Chain."
+        },
+        {
+          "name": "execute_hktreas_action",
+          "description": "Executes authenticated Governance state transition."
+        }
+      ]
+    }
+  }
+}
